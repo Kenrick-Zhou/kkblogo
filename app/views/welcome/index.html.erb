@@ -1,4 +1,31 @@
-<!DOCTYPE html>
+<%= content_for :css do %>
+  <style>
+    body {
+      padding-top: 50px;
+      padding-bottom: 100px;
+    }
+
+    .jumbotron {
+      background:url('http://kkblogo.b0.upaiyun.com/bg.jpg') no-repeat center center;
+      background-size:100% auto;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,.2);
+      padding-bottom: 100px;
+    }
+    @media (max-width: 672px) {
+      .jumbotron {
+        background-size:auto 100%;
+      }
+    }
+    @media (min-width: 673px) {
+      .jumbotron {
+        background-size:100% auto;
+      }
+
+    }
+  </style>
+<% end %>
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -12,7 +39,8 @@
   <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
   <!-- Custom styles for this template -->
-  <link href="navbar-fixed-top.css" rel="stylesheet">
+  <!--<link href="navbar-fixed-top.css" rel="stylesheet">-->
+  <!--<%= stylesheet_link_tag    "navbar-fixed-top" %>-->
 
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
