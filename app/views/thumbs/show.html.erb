@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @thumb.name %>
+</p>
+
+<p>
+  <strong>Ext:</strong>
+  <%= @thumb.ext %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @thumb.width %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @thumb.height %>
+</p>
+
+<%= link_to 'Edit', edit_thumb_path(@thumb) %> |
+<%= link_to 'Back', thumbs_path %>

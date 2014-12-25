@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :thumbs
+
   resources :logos
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -6,6 +8,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+  root :to => 'welcome#index'
+  get 'welcome' => 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -15,6 +19,8 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
+  resources :logos
 
   # Example resource route with options:
   #   resources :products do
