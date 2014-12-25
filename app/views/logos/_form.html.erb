@@ -1,0 +1,33 @@
+<%= form_for(@logo) do |f| %>
+  <% if @logo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@logo.errors.count, "error") %> prohibited this logo from being saved:</h2>
+
+      <ul>
+      <% @logo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :svg_url %><br>
+    <%= f.text_field :svg_url %>
+  </div>
+  <div class="field">
+    <%= f.label :png_url %><br>
+    <%= f.text_field :png_url %>
+  </div>
+  <div class="field">
+    <%= f.label :jpg_url %><br>
+    <%= f.text_field :jpg_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
